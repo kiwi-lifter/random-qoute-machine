@@ -9,8 +9,8 @@ function getQuote() {
     },
     url: 'https://andruxnet-random-famous-quotes.p.mashape.com/cat=movies',
     success: function(quoteInfo) {
-      var info = JSON.parse(quoteInfo);
-      currentQuote = info.quote;
+      var info = JSON.parse(quoteInfo),
+      currentQuote = info.quote,
       currentAuthor = info.author;
      
      $('#tweet-quote').attr('href', 'https://twitter.com/intent/tweet?hashtags=quotes&related=freecodecamp&text=' + encodeURIComponent('"' + currentQuote + '" ' + currentAuthor));
@@ -32,10 +32,10 @@ function getQuote() {
           $(this).animate({
             opacity: 1
           }, 500);
-          $('#author').html(info.author);
+          $('#author').html('> ' + info.author);
         });  
-    }
-  });
+    } // end ajax request success function
+  }); // end ajax request function
 }
 
 $(document).ready(function() {
