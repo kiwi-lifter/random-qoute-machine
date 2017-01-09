@@ -1,5 +1,7 @@
-// javascript
-
+/**
+ * @description Generates an API request for a random movie quote. 
+ * @param {success} callback - Handles the successful andruxnet random famous quotes request result. 
+ **/
 function getQuote() {
   $.ajax({
     headers: {
@@ -13,9 +15,9 @@ function getQuote() {
       currentQuote = info.quote,
       currentAuthor = info.author;
      
-     $('#tweet-quote').attr('href', 'https://twitter.com/intent/tweet?hashtags=quotes&related=freecodecamp&text=' + encodeURIComponent('"' + currentQuote + '" ' + currentAuthor));
+    $('#tweet-quote').attr('href', 'https://twitter.com/intent/tweet?hashtags=quotes&related=freecodecamp&text=' + encodeURIComponent('"' + currentQuote + '" ' + currentAuthor));
      
-      $(".quote-text").animate({
+    $(".quote-text").animate({
           opacity: 0
         }, 500,
         function() {
@@ -25,14 +27,14 @@ function getQuote() {
           $('#text').text(info.quote);
         });
 
-      $(".quote-author").animate({
+    $(".quote-author").animate({
           opacity: 0
         }, 500,
         function() {
           $(this).animate({
             opacity: 1
           }, 500);
-          $('#author').html('> ' + info.author);
+          $('#author').html(info.author);
         });  
     } // end ajax request success function
   }); // end ajax request function
