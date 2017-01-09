@@ -4,26 +4,56 @@ body {
 }
 
 .quote-box {
-	width: 33%;
-	margin: auto;
+	width: 50%;
+	background-color: #7c4dff;
+	margin: 5em auto auto auto;
 	border: 1px solid #fff;
 	padding: 1em;
+	font-size: 2em;
+	text-align: center;
 }
 
 .quote-author {
 	text-align: right;
+	margin-top: 1em;
 	padding: 0.25em;
+	font-size: 0.75em;
 }
 
 .buttons {
 	margin-top: 1em;
+	text-align: left;
 }
 
 .btn-color, .btn-color:focus {
-	background-color: #7c4dff;
+	background-color: #512da8;
 }
 
 .btn-color:hover {
 	background-color: #bdbdbd;
 }
 
+.button {
+	height: 100px;
+	width: 100px;
+	margin-right: 0.5em;
+}
+
+.btn-quote {
+	float: right;
+}
+
+.button:hover {
+	text-decoration: none;
+}
+
+.button-image {
+	height: 50px;
+	width: 50px;
+}
+
+.copyright {
+	clear: both;
+	text-align: right;
+	margin-top: 1em;
+	font-size: 0.4em;
